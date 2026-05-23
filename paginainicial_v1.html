@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+</head>
+
+<body>
+
+    <header class="cabecalho"> <!-- Cabeçalho da página. Sem isso o conteúdo aparece, mas sem semântica. -->
+        <nav class="Menu1" label="Menu principal">
+            <!-- Menu de navegação principal. Sem isso os links aparecem soltos. -->
+            <ul> <!-- Lista de itens do menu. -->
+                <li><a href="index1.html">Início</a></li> <!-- Link ativo para a página inicial. -->
+                <li><a href="calendario.html">Calendário</a></li> <!-- Link para calendário. -->
+                <li><a href="mapa.html">Mapa do IF</a></li> <!-- Link para mapa. -->
+                <li><a href="suap.html">SUAP</a></li> <!-- Link para SUAP. -->
+                <li><a href="faq.html">FAQ</a></li> <!-- Link para FAQ. -->
+            </ul>
+        </nav>
+
+        <div class="container1"> <!-- Container para agrupar elementos visuais do cabeçalho. -->
+            <section class="painel-boasvindas"> <!-- Seção principal de boas-vindas. -->
+                <p class="intro">Boas-vindas ao IF</p> <!-- Texto introdutório. -->
+                <h1 id="titulo-home">Seu começo no campus, mais claro desde o primeiro dia.</h1>
+                <!-- Título principal da página. -->
+                <p class="intro">Um guia rápido para encontrar o que importa...</p> <!-- Texto explicativo. -->
+                <div class="opcoesduvida"> <!-- Área de botões de ação. -->
+                    <a class="button" href="faq.html#form-duvidas">Enviar uma dúvida</a> <!-- Botão para FAQ. -->
+                    <a class="button" href="mapa.html">Conhecer o campus</a> <!-- Botão para mapa. -->
+                </div>
+            </section>
+
+            <aside class="resumo">
+                <span>Guia rápido</span>
+                <h2>Primeiras missões</h2>
+                <ul>
+                    <li><span>1</span> Conferir o horário da turma</li>
+                    <li><span>2</span> Localizar sala, biblioteca e secretaria</li>
+                    <li><span>3</span> Entrar no SUAP e acompanhar avisos</li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+
+
+    <main> <!-- Conteúdo principal da página. -->
+        <section class="section"> <!-- Seção de atalhos. -->
+            <div class="container1">
+                <!-- isso pode se transformar em container2, mas por enquanto só pra organizar o css -->
+                <div class="section-cabecalho">
+                    <h2>Comece por aqui</h2>
+                    <p class="lead">Atalhos pensados para resolver...</p> <!-- lead é usado p dar destaque -->
+                </div>
+                <div class="recursos"> <!-- Grade de recursos. -->
+                    <article class="cardrecursos"> <!-- Card de recurso. -->
+                        <p class="iconrecurso">01</p>
+                        <h3>Calendário sem susto</h3>
+                        <p>Veja datas importantes...</p>
+                        <a href="calendario.html">Abrir calendário</a>
+                    </article>
+                    <article class="cardrecursos">
+                        <p class="iconrecurso">02</p>
+                        <h3>Mapa para chegar melhor</h3>
+                        <p>Encontre biblioteca...</p>
+                        <a href="mapa.html">Ver mapa</a>
+                    </article>
+                    <article class="cardrecursos">
+                        <p class="iconrecurso">03</p>
+                        <h3>SUAP sem mistério</h3>
+                        <p>Entenda onde consultar notas...</p>
+                        <a href="suap.html">Acessar guia</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section"> <!-- Seção de dicas. -->
+            <div class="container1">
+                <div class="bemvindo">
+                    <article>
+                        <span class="dicas">Dica de chegada</span>
+                        <h2>Primeira semana no IF</h2>
+                        <p>Confirme seus horários...</p>
+                    </article>
+                    <a class="button" href="faq.html">Tirar dúvidas frequentes</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section"> <!-- Seção de ações. -->
+            <div class="container1">
+                <div class="section-cabecalho">
+                    <h2>O que fazer agora?</h2>
+                    <p class="lead">Escolha o caminho...</p>
+                </div>
+                <div class="acoes"> <!-- Grade de ações. -->
+                    <article class="cardacoes">
+                        <h3>Estou começando hoje</h3>
+                        <p>Confira o mapa...</p>
+                        <a href="mapa.html">Ver orientação</a>
+                    </article>
+                    <article class="cardacoes">
+                        <h3>Preciso me organizar</h3>
+                        <p>Use o calendário...</p>
+                        <a href="calendario.html">Planejar semana</a>
+                    </article>
+                    <article class="cardacoes">
+                        <h3>Tenho uma dúvida específica</h3>
+                        <p>Veja respostas rápidas...</p>
+                        <a href="faq.html#form-duvidas">Enviar dúvida</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"> <!-- Rodapé da página. -->
+        <div class="containerfooter">
+            <p>Projeto Final - Desenvolvimento WEB 1</p>
+        </div>
+    </footer>
+</body>
+
+</html>
