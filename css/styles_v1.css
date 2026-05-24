@@ -1,0 +1,279 @@
+/* Importa a fonte Domine do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Paleta de cores */
+:root {
+  --cor-fundo: #eef5ef;
+  --cor-branca: #ffffff;
+  --cor-texto: #183126;
+  --cor-texto-suave: #5a675f;
+  --cor-verde: #188342;
+  --cor-verde-escuro: #0d5d32;
+  --cor-azul: #195b7a;
+  --cor-amarelo: #f3b43f;
+  --cor-borda: #d4dfd6;
+  --cor-card: #ffffff;
+  --sombra: 0 12px 30px rgba(24, 49, 38, 0.1);
+}
+
+/* Corpo */
+body {
+  font-family: 'Domine', serif;
+  background:
+    radial-gradient(circle at top left, rgba(243, 180, 63, 0.22), transparent 28rem),
+    linear-gradient(180deg, #eef7f1 0%, var(--cor-fundo) 44%, #f7f4ec 100%);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  padding-top: 104px;
+  padding-bottom: 34px;
+}
+
+.Menu1 {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  padding: 8px 12px;
+  box-shadow: var(--sombra);
+  z-index: 1000;
+}
+
+.Menu1 ul {
+  list-style: none;   /* remove bolinhas */
+  display: flex;      /* mantém horizontal */
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu1 li {
+  display: inline-block;
+}
+
+.Menu1 a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+}
+
+.Menu1 a:hover,
+.Menu1 a.active {
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+}
+
+/* Botões */
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--cor-verde-escuro);
+}
+
+.button-secondary {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #edf4ef;
+  color: var(--cor-texto);
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid var(--cor-borda);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-secondary:hover {
+  background-color: #dfece4;
+}
+
+/* Container */
+.container1 {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Painel de boas-vindas */
+.painel-boasvindas {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  padding: 34px;
+}
+
+.intro {
+  color: var(--cor-verde-escuro);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.lead {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+}
+
+/* Resumo lateral */
+.resumo {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  padding: 26px;
+}
+
+/* Seções */
+.section {
+  padding: 20px 0;
+}
+
+.section-cabecalho {
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--cor-verde-escuro);
+}
+
+/* Cards */
+.cardacoes {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  padding: 20px;
+}
+
+.cardacoes h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--cor-verde-escuro);
+  font-weight: 700;
+}
+
+.cardacoes p {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
+
+.acoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Cronograma */
+.card-cronograma {
+  padding: 24px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+.tabela-cronograma {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.tabela-cronograma th,
+.tabela-cronograma td {
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 14px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.tabela-cronograma thead th {
+  background-color: #ece7dd;
+}
+
+.tabela-cronograma tbody th {
+  color: var(--cor-verde-escuro);
+}
+
+/* Passos (SUAP) */
+.passos {
+  display: grid;
+  gap: 14px;
+}
+
+.passo {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 14px;
+  padding: 18px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+.numero {
+  width: 50px;
+  height: 50px;
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.site-footer {
+  padding: 24px 0 30px;
+}
+
+.containerfooter {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  padding: 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
