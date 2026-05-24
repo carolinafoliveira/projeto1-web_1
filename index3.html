@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do IF | Mapa do Campus</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index1.html">Início</a></li>
+        <li><a href="index2.html">Calendário</a></li>
+        <li><a class="active" href="index3.html" aria-current="page">Mapa do IF</a></li>
+        <li><a href="index4.html">SUAP</a></li>
+        <li><a href="index5.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container hero">
+      <section class="hero-panel" aria-labelledby="titulo-mapa">
+        <p class="eyebrow">Orientação no campus</p>
+        <h1 id="titulo-mapa">Entenda rapidamente onde ficam os setores mais importantes do IF.</h1>
+        <p class="lead">Esta página funciona como um guia inicial para quem ainda está se localizando. Ela não substitui o mapa oficial do campus, mas ajuda a memorizar os espaços mais usados no dia a dia.</p>
+      </section>
+
+      <aside class="hero-card" aria-label="Dicas de localização">
+        <h2>Antes de sair procurando</h2>
+        <ul class="hero-highlights">
+          <li><strong>Cheque o bloco:</strong> sala errada costuma ser confusão de bloco.</li>
+          <li><strong>Olhe os murais:</strong> eles ajudam muito no início.</li>
+          <li><strong>Peça orientação:</strong> servidores e veteranos costumam ajudar.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container map-layout">
+        <section class="map-board" aria-labelledby="titulo-setores">
+          <div class="section-header">
+            <h2 id="titulo-setores">Setores principais</h2>
+            <p class="lead">Versão interativa inicial do mapa. Já é possível pesquisar ambientes e destacar áreas, e depois podemos trocar a arte por uma imagem aérea real do campus.</p>
+          </div>
+          <label class="map-search" for="map-search-input">
+            <span>Pesquisar sala ou ambiente</span>
+            <input id="map-search-input" type="search" placeholder="Ex.: biblioteca, laboratório, secretaria, sala" data-map-search>
+          </label>
+          <div class="interactive-map" aria-label="Mapa interativo do campus">
+            <div class="map-surface">
+              <button class="map-pin" type="button" style="top: 18%; left: 22%;" data-location="Bloco de salas" data-keywords="sala salas aula bloco turmas" aria-label="Bloco de salas">
+                <span>Bloco de salas</span>
+              </button>
+              <button class="map-pin" type="button" style="top: 28%; left: 64%;" data-location="Laboratórios" data-keywords="laboratorio laboratório laboratórios informática química física pratica prática" aria-label="Laboratórios">
+                <span>Laboratórios</span>
+              </button>
+              <button class="map-pin" type="button" style="top: 58%; left: 28%;" data-location="Biblioteca" data-keywords="biblioteca estudo leitura livros pesquisa" aria-label="Biblioteca">
+                <span>Biblioteca</span>
+              </button>
+              <button class="map-pin" type="button" style="top: 62%; left: 68%;" data-location="Secretaria e coordenação" data-keywords="secretaria coordenacao coordenação atendimento documentos matricula matrícula" aria-label="Secretaria e coordenação">
+                <span>Secretaria</span>
+              </button>
+              <button class="map-pin" type="button" style="top: 78%; left: 48%;" data-location="Pátio central" data-keywords="patio pátio convivência convivência intervalo entrada" aria-label="Pátio central">
+                <span>Pátio</span>
+              </button>
+            </div>
+          </div>
+          <div class="map-grid">
+            <article class="zone">
+              <h3>Bloco de salas</h3>
+              <p>Espaço onde acontecem a maior parte das aulas teóricas, reuniões e orientações de turma.</p>
+            </article>
+            <article class="zone">
+              <h3>Laboratórios</h3>
+              <p>Área destinada a atividades práticas, projetos e disciplinas que exigem computador ou equipamentos específicos.</p>
+            </article>
+            <article class="zone">
+              <h3>Biblioteca</h3>
+              <p>Local de estudo, consulta de livros, leitura silenciosa e apoio para pesquisas acadêmicas.</p>
+            </article>
+            <article class="zone">
+              <h3>Secretaria e coordenação</h3>
+              <p>Setores para questões administrativas, documentos, matrícula, horários e orientações institucionais.</p>
+            </article>
+          </div>
+        </section>
+
+        <aside class="card" aria-label="Roteiro de deslocamento">
+          <h2>Roteiro rápido</h2>
+          <ul class="list">
+            <li>Chegou ao campus: localize a entrada principal e o mural de avisos.</li>
+            <li>Antes da aula: confirme bloco, andar e número da sala.</li>
+            <li>No intervalo: descubra onde ficam banheiro, cantina e biblioteca.</li>
+            <li>Se surgir dúvida: secretaria, recepção ou coordenação costumam ser os melhores pontos de apoio.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+          <article class="card">
+            <h3>Se você está atrasado</h3>
+            <p>Priorize encontrar seu bloco e sua sala. Depois, com mais calma, descubra os outros ambientes do campus.</p>
+          </article>
+          <article class="card">
+            <h3>Se você está perdido</h3>
+            <p>Use referências fixas como portaria, pátio central, biblioteca ou secretaria para se reposicionar.</p>
+          </article>
+          <article class="card">
+            <h3>Se você quer se planejar</h3>
+            <p>Uma boa estratégia é visitar o campus com alguns minutos de antecedência nas primeiras semanas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Guia do IF. Página de orientação espacial para estudantes do campus.</p>
+    </div>
+  </footer>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>

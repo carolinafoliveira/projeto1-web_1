@@ -1,0 +1,133 @@
+<!DOCTYPE html> <!-- Define que o documento é HTML5. Sem isso o navegador pode usar modo antigo (quirks). -->
+<html lang="pt-BR"> <!-- Início do documento, idioma definido como português do Brasil. Sem isso acessibilidade e SEO ficam prejudicados. -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres (UTF-8). Sem isso acentos podem quebrar. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta para telas de celular. Sem isso a página não fica responsiva. -->
+  <title>Guia do IF | Página Inicial</title> <!-- Título da aba do navegador. Sem isso aparece "Sem título". -->
+  <link rel="stylesheet" href="css/styles.css"> <!-- Importa o CSS externo. Sem isso a página fica sem estilo. -->
+</head>
+<body> <!-- Corpo da página, tudo que é visível ao usuário. -->
+
+  <header class="site-header"> <!-- Cabeçalho da página. Sem isso o conteúdo aparece, mas sem semântica. -->
+    <nav class="site-nav" aria-label="Menu principal"> <!-- Menu de navegação principal. Sem isso os links aparecem soltos. -->
+      <ul> <!-- Lista de itens do menu. -->
+        <li><a class="active" href="index1.html" aria-current="page">Início</a></li> <!-- Link ativo para a página inicial. -->
+        <li><a href="index2.html">Calendário</a></li> <!-- Link para calendário. -->
+        <li><a href="index3.html">Mapa do IF</a></li> <!-- Link para mapa. -->
+        <li><a href="index4.html">SUAP</a></li> <!-- Link para SUAP. -->
+        <li><a href="index5.html">FAQ</a></li> <!-- Link para FAQ. -->
+      </ul>
+    </nav>
+
+    <div class="container hero"> <!-- Container para agrupar elementos visuais do cabeçalho. -->
+      <section class="hero-panel welcome-hero" aria-labelledby="titulo-home"> <!-- Seção principal de boas-vindas. -->
+        <p class="eyebrow">Boas-vindas ao IF</p> <!-- Texto introdutório. -->
+        <h1 id="titulo-home">Seu começo no campus, mais claro desde o primeiro dia.</h1> <!-- Título principal da página. -->
+        <p class="lead">Um guia rápido para encontrar o que importa...</p> <!-- Texto explicativo. -->
+        <div class="hero-actions"> <!-- Área de botões de ação. -->
+          <a class="button" href="index5.html#form-duvidas">Enviar uma dúvida</a> <!-- Botão para FAQ. -->
+          <a class="button-secondary" href="index3.html">Conhecer o campus</a> <!-- Botão para mapa. -->
+        </div>
+      </section>
+
+      <aside class="hero-card welcome-card" aria-label="Resumo rápido"> <!-- Conteúdo complementar (resumo). -->
+        <span class="status-pill">Guia rápido</span>
+        <h2>Primeiras missões</h2>
+        <ul class="mission-list">
+          <li><span>1</span> Conferir o horário da turma</li>
+          <li><span>2</span> Localizar sala, biblioteca e secretaria</li>
+          <li><span>3</span> Entrar no SUAP e acompanhar avisos</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main> <!-- Conteúdo principal da página. -->
+    <section class="section"> <!-- Seção de atalhos. -->
+      <div class="container">
+        <div class="section-header">
+          <h2>Comece por aqui</h2>
+          <p class="lead">Atalhos pensados para resolver...</p>
+        </div>
+        <div class="feature-grid"> <!-- Grade de recursos. -->
+          <article class="feature-card"> <!-- Card de recurso. -->
+            <p class="feature-icon">01</p>
+            <h3>Calendário sem susto</h3>
+            <p>Veja datas importantes...</p>
+            <a href="index2.html">Abrir calendário</a>
+          </article>
+          <article class="feature-card">
+            <p class="feature-icon">02</p>
+            <h3>Mapa para chegar melhor</h3>
+            <p>Encontre biblioteca...</p>
+            <a href="index3.html">Ver mapa</a>
+          </article>
+          <article class="feature-card">
+            <p class="feature-icon">03</p>
+            <h3>SUAP sem mistério</h3>
+            <p>Entenda onde consultar notas...</p>
+            <a href="index4.html">Acessar guia</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"> <!-- Seção de dicas. -->
+      <div class="container">
+        <div class="welcome-strip">
+          <article>
+            <span class="status-pill">Dica de chegada</span>
+            <h2>Primeira semana no IF</h2>
+            <p>Confirme seus horários...</p>
+          </article>
+          <a class="button" href="index5.html">Tirar dúvidas frequentes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"> <!-- Seção de ações. -->
+      <div class="container">
+        <div class="section-header">
+          <h2>O que fazer agora?</h2>
+          <p class="lead">Escolha o caminho...</p>
+        </div>
+        <div class="action-grid">
+          <article class="card action-card">
+            <h3>Estou começando hoje</h3>
+            <p>Confira o mapa...</p>
+            <a href="index3.html">Ver orientação</a>
+          </article>
+          <article class="card action-card">
+            <h3>Preciso me organizar</h3>
+            <p>Use o calendário...</p>
+            <a href="index2.html">Planejar semana</a>
+          </article>
+          <article class="card action-card">
+            <h3>Tenho uma dúvida específica</h3>
+            <p>Veja respostas rápidas...</p>
+            <a href="index5.html#form-duvidas">Enviar dúvida</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"> <!-- Rodapé da página. -->
+    <div class="container">
+      <p>&copy; 2026 Guia do IF. Projeto acadêmico...</p>
+    </div>
+  </footer>
+
+  <!-- Plugin VLibras para acessibilidade em Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script> <!-- Importa o script do VLibras. -->
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app"); <!-- Inicializa o plugin VLibras. -->
+  </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do IF | FAQ</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index1.html">Início</a></li>
+        <li><a href="index2.html">Calendário</a></li>
+        <li><a href="index3.html">Mapa do IF</a></li>
+        <li><a href="index4.html">SUAP</a></li>
+        <li><a class="active" href="index5.html" aria-current="page">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container hero">
+      <section class="hero-panel" aria-labelledby="titulo-faq">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h1 id="titulo-faq">Dúvidas comuns, respostas rápidas e um canal para perguntar.</h1>
+        <p class="lead">Encontre orientações sobre rotina acadêmica, campus, SUAP e atendimento. Se sua pergunta não aparecer aqui, envie pelo formulário no fim da página.</p>
+        <div class="hero-actions">
+          <a class="button" href="#form-duvidas">Enviar dúvida</a>
+          <a class="button-secondary" href="#duvidas-iniciais">Ver perguntas</a>
+        </div>
+      </section>
+
+      <aside class="hero-card" aria-label="Dica de consulta">
+        <h2>Como usar esta página</h2>
+        <ul class="hero-highlights">
+          <li><strong>Leia por tema:</strong> escolha a pergunta mais próxima da sua situação.</li>
+          <li><strong>Confirme no setor certo:</strong> quando necessário, fale com coordenação ou secretaria.</li>
+          <li><strong>Envie sua dúvida:</strong> use o formulário quando precisar de uma resposta mais específica.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="duvidas-iniciais">
+      <div class="container">
+        <div class="section-header">
+          <h2>Dúvidas iniciais</h2>
+          <p class="lead">Perguntas comuns entre estudantes que estão nos primeiros dias de aula.</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Como descubro minha sala e meu horário?</summary>
+            <p>Consulte o horário da turma, verifique os murais ou a orientação enviada pela instituição. Quando houver dúvida, procure coordenação, secretaria ou recepção.</p>
+          </details>
+          <details>
+            <summary>Onde vejo minhas notas e faltas?</summary>
+            <p>Essas informações normalmente ficam no SUAP. O ideal é acompanhar com frequência ao longo do semestre, e não apenas no final.</p>
+          </details>
+          <details>
+            <summary>O que fazer se eu me perder no campus?</summary>
+            <p>Use pontos de referência como portaria, biblioteca, pátio ou secretaria. Se necessário, peça ajuda a servidores ou colegas veteranos.</p>
+          </details>
+          <details>
+            <summary>Preciso olhar o calendário mesmo sem prova marcada?</summary>
+            <p>Sim. O calendário ajuda a prever feriados, recessos, períodos letivos, rematrícula e semanas mais intensas de atividades.</p>
+          </details>
+          <details>
+            <summary>Com quem falo quando tenho uma dúvida administrativa?</summary>
+            <p>Depende do assunto, mas secretaria, coordenação de curso e setores de atendimento costumam ser os principais pontos de apoio.</p>
+          </details>
+          <details>
+            <summary>Esqueci minha senha do SUAP. O que faço?</summary>
+            <p>Procure a opção de recuperação de senha no próprio SUAP. Se não conseguir resolver, busque orientação no setor responsável por atendimento acadêmico ou suporte.</p>
+          </details>
+          <details>
+            <summary>Como sei se uma informação é oficial?</summary>
+            <p>Dê preferência aos canais institucionais, comunicados da coordenação, secretaria, SUAP e murais do campus. Em caso de conflito, confirme com o setor responsável.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="faq-support" id="form-duvidas">
+          <article class="question-bubble">
+            <span class="status-pill">Não achou?</span>
+            <h2>Envie sua dúvida</h2>
+            <p>Preencha o formulário com seus dados e explique a situação. Quanto mais clara for a pergunta, mais fácil fica orientar o próximo passo.</p>
+          </article>
+          <form class="question-form" action="#" method="post" data-question-form>
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" required>
+
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">Escolha uma opção</option>
+              <option value="calendario">Calendário acadêmico</option>
+              <option value="mapa">Mapa e localização</option>
+              <option value="suap">SUAP</option>
+              <option value="documentos">Documentos e secretaria</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+
+            <label for="duvida">Sua dúvida</label>
+            <textarea id="duvida" name="duvida" rows="5" placeholder="Descreva sua dúvida com detalhes" required></textarea>
+
+            <button class="button" type="submit">Enviar dúvida</button>
+            <p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Guia do IF. Página de perguntas frequentes para apoio ao estudante.</p>
+    </div>
+  </footer>
+  <script>
+    const questionForm = document.querySelector("[data-question-form]");
+    const formFeedback = document.querySelector("[data-form-feedback]");
+
+    questionForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      formFeedback.textContent = "Dúvida registrada. Em um projeto real, esta mensagem seria enviada para o setor responsável.";
+      questionForm.reset();
+    });
+  </script>
+</body>
+</html>

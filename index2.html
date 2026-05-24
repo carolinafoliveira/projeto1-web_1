@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do IF | Calendário Acadêmico</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index1.html">Início</a></li>
+        <li><a class="active" href="index2.html" aria-current="page">Calendário</a></li>
+        <li><a href="index3.html">Mapa do IF</a></li>
+        <li><a href="index4.html">SUAP</a></li>
+        <li><a href="index5.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container hero">
+      <section class="hero-panel" aria-labelledby="titulo-calendario">
+        <p class="eyebrow">Calendário por curso</p>
+        <h1 id="titulo-calendario">Monte sua semana acadêmica em poucos cliques.</h1>
+        <p class="lead">Escolha seu curso e o semestre para visualizar um cronograma organizado por dia, horário, disciplina, professor e local. Ao passar o mouse pelo local, aparece um atalho direto para a página do mapa.</p>
+      </section>
+
+      <aside class="hero-card" aria-label="Como funciona o calendário">
+        <h2>Como usar</h2>
+        <ul class="hero-highlights">
+          <li><strong>1. Curso:</strong> selecione a formação que você está cursando.</li>
+          <li><strong>2. Semestre:</strong> escolha de 1º a 6º semestre.</li>
+          <li><strong>3. Local:</strong> passe o mouse na sala para abrir o atalho do mapa.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="calendar-shell">
+          <section class="calendar-picker" aria-labelledby="titulo-escolhas">
+            <span class="status-pill">Escolha rápida</span>
+            <h2 id="titulo-escolhas">Qual o seu curso?</h2>
+            <p class="lead">A página mostra apenas o cronograma correspondente às opções selecionadas, deixando a consulta mais limpa.</p>
+
+            <div class="form-row">
+              <label for="course-select">Curso</label>
+              <select id="course-select" data-course-select>
+                <option value="">Selecione uma opção</option>
+                <option value="analise">Análise de Sistemas</option>
+                <option value="turismo">Turismo</option>
+                <option value="matematica">Matemática</option>
+                <option value="pedagogia">Pedagogia</option>
+                <option value="edificacoes">Edificações</option>
+              </select>
+            </div>
+
+            <div class="form-row semester-field" data-semester-field hidden>
+              <label for="semester-select">Qual semestre?</label>
+              <select id="semester-select" data-semester-select>
+                <option value="">Selecione o semestre</option>
+                <option value="1">1º semestre</option>
+                <option value="2">2º semestre</option>
+                <option value="3">3º semestre</option>
+                <option value="4">4º semestre</option>
+                <option value="5">5º semestre</option>
+                <option value="6">6º semestre</option>
+              </select>
+            </div>
+          </section>
+
+          <aside class="calendar-summary" data-calendar-summary>
+            <span class="status-pill">Aguardando</span>
+            <h2>Selecione um curso</h2>
+            <p>Depois de escolher curso e semestre, o cronograma aparece aqui com as aulas da semana.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-schedule-section hidden>
+      <div class="container">
+        <article class="schedule-card">
+          <div class="section-header">
+            <span class="status-pill" data-schedule-badge>Cronograma</span>
+            <h2 data-schedule-title>Grade semanal</h2>
+            <p class="lead" data-schedule-description>Selecione as opções acima para visualizar.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="schedule-table dynamic-schedule">
+              <thead>
+                <tr>
+                  <th>Dia</th>
+                  <th>19h00 às 20h40</th>
+                  <th>21h00 às 22h40</th>
+                </tr>
+              </thead>
+              <tbody data-schedule-body></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="action-grid">
+          <article class="card action-card">
+            <h3>Precisa achar uma sala?</h3>
+            <p>Use o atalho que aparece ao passar o mouse pelo local no cronograma ou abra o mapa completo.</p>
+            <a href="index3.html">Abrir mapa do IF</a>
+          </article>
+          <article class="card action-card">
+            <h3>Vai acompanhar notas?</h3>
+            <p>Depois de se organizar pela grade, consulte faltas, notas e avisos no SUAP.</p>
+            <a href="index4.html">Ver guia do SUAP</a>
+          </article>
+          <article class="card action-card">
+            <h3>Ficou com dúvida?</h3>
+            <p>A página de FAQ reúne perguntas comuns e também tem formulário para envio de dúvidas.</p>
+            <a href="index5.html#form-duvidas">Enviar dúvida</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Guia do IF. Calendário de apoio para organização acadêmica.</p>
+    </div>
+  </footer>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+  <script src="js/calendario.js"></script>
+</body>
+</html>

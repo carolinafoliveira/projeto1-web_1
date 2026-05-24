@@ -1,0 +1,984 @@
+/* Reset básico para remover margens padrão e facilitar o controle do layout. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configura a rolagem suave da página. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define as cores principais usadas no site. */
+:root {
+  --cor-fundo: #eef5ef;
+  --cor-branca: #ffffff;
+  --cor-texto: #183126;
+  --cor-texto-suave: #5a675f;
+  --cor-verde: #188342;
+  --cor-verde-escuro: #0d5d32;
+  --cor-azul: #195b7a;
+  --cor-amarelo: #f3b43f;
+  --cor-borda: #d4dfd6;
+  --cor-card: #ffffff;
+  --sombra: 0 12px 30px rgba(24, 49, 38, 0.1);
+}
+
+/* Estilo geral do corpo da página. */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(243, 180, 63, 0.22), transparent 28rem),
+    linear-gradient(180deg, #eef7f1 0%, var(--cor-fundo) 44%, #f7f4ec 100%);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+/* Ajusta imagens para não ultrapassarem o espaço disponível. */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove a cor padrão dos links. */
+a {
+  color: inherit;
+}
+
+/* Remove marcadores padrão das listas. */
+ul {
+  list-style: none;
+}
+
+/* Centraliza o conteúdo principal do site. */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cria espaço no topo para o menu fixo e organiza a abertura da página. */
+.site-header {
+  padding-top: 104px;
+  padding-bottom: 34px;
+}
+
+/* Estiliza o menu principal fixo no topo. */
+.site-nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: calc(100% - 24px);
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  padding: 8px 12px;
+  box-shadow: var(--sombra);
+  z-index: 1000;
+}
+
+/* Organiza os links do menu lado a lado. */
+.site-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+/* Define o visual dos links do menu. */
+.site-nav a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+  white-space: nowrap;
+}
+
+/* Destaca links ao passar o mouse ou quando a página está ativa. */
+.site-nav a:hover,
+.site-nav a.active {
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+}
+
+/* Organiza o bloco inicial das páginas em duas colunas. */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Cria o visual principal dos blocos do topo. */
+.hero-panel,
+.hero-card,
+.card,
+.callout,
+.map-board,
+.timeline-item,
+.step,
+.faq details,
+.schedule-card {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+/* Espaçamento interno do bloco principal do topo. */
+.hero-panel {
+  padding: 34px;
+}
+
+/* Espaçamento interno do bloco lateral do topo. */
+.hero-card {
+  padding: 26px;
+}
+
+/* Cria uma abertura mais marcante para a página inicial. */
+.welcome-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(115deg, rgba(13, 93, 50, 0.94), rgba(25, 91, 122, 0.86)),
+    linear-gradient(135deg, #0d5d32 0 45%, #f3b43f 45% 58%, #195b7a 58% 100%);
+  color: var(--cor-branca);
+}
+
+/* Elemento visual simples inspirado em blocos, pátio e caminhos do campus. */
+.welcome-hero::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -36px;
+  width: 270px;
+  height: 230px;
+  border: 18px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(90deg, transparent 0 42%, rgba(243, 180, 63, 0.75) 42% 52%, transparent 52%),
+    linear-gradient(0deg, transparent 0 44%, rgba(255, 255, 255, 0.2) 44% 52%, transparent 52%),
+    rgba(255, 255, 255, 0.08);
+  transform: rotate(-6deg);
+}
+
+.welcome-hero .eyebrow,
+.welcome-hero .lead {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.welcome-hero h1,
+.welcome-hero p,
+.welcome-hero .hero-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f5fbf7 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilo do texto pequeno acima do título principal. */
+.eyebrow {
+  color: var(--cor-verde-escuro);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Estilo do título principal. */
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  margin-bottom: 14px;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+/* Define o texto descritivo usado em várias partes do site. */
+.lead {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+}
+
+/* Organiza botões e links de ação. */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Estilo base dos botões. */
+.button,
+.button-secondary {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo do botão principal. */
+.button {
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+}
+
+.button:hover {
+  background-color: var(--cor-verde-escuro);
+}
+
+/* Estilo do botão secundário. */
+.button-secondary {
+  background-color: #edf4ef;
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+.button-secondary:hover {
+  background-color: #dfece4;
+}
+
+/* Espaço entre os itens do resumo do topo. */
+.hero-highlights {
+  display: grid;
+  gap: 10px;
+}
+
+/* Visual dos itens do resumo do topo. */
+.hero-highlights li {
+  background-color: #f1f7f3;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
+
+.status-pill {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background-color: rgba(243, 180, 63, 0.18);
+  color: var(--cor-verde-escuro);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mission-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.mission-list li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
+  gap: 10px;
+  color: var(--cor-texto-suave);
+  font-weight: bold;
+}
+
+.mission-list span {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Define o espaçamento das áreas principais da página. */
+main {
+  padding-bottom: 40px;
+}
+
+/* Cria espaço vertical entre as seções. */
+.section {
+  padding: 20px 0;
+}
+
+/* Ajusta o cabeçalho de cada seção. */
+.section-header {
+  margin-bottom: 18px;
+}
+
+/* Define o tamanho dos títulos das seções. */
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+/* Organiza cards em grade. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-grid,
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Estilo padrão dos cards de conteúdo. */
+.card {
+  padding: 20px;
+}
+
+.feature-card {
+  min-height: 230px;
+  padding: 22px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-top: 5px solid var(--cor-verde);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:nth-child(2) {
+  border-top-color: var(--cor-azul);
+}
+
+.feature-card:nth-child(3) {
+  border-top-color: var(--cor-amarelo);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #edf6f0;
+  color: var(--cor-verde-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* Ajusta títulos dos cards. */
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+/* Reduz o tamanho do texto dos cards para melhorar a leitura. */
+.card p,
+.feature-card p,
+.card li {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
+
+.card a,
+.feature-card a,
+.action-card a {
+  color: var(--cor-verde-escuro);
+  font-weight: bold;
+  margin-top: auto;
+  display: inline-block;
+  padding-top: 14px;
+}
+
+/* Cria listas simples com espaçamento entre itens. */
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+/* Destaca blocos importantes com fundo verde. */
+.callout {
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  padding: 24px;
+}
+
+.welcome-strip {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branca);
+  border-radius: 8px;
+  padding: 26px;
+  box-shadow: var(--sombra);
+}
+
+.welcome-strip p,
+.welcome-strip .status-pill {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.welcome-strip .status-pill {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.welcome-strip .button {
+  background-color: var(--cor-amarelo);
+  color: #2b2413;
+}
+
+/* Mantém a leitura clara dentro dos blocos de destaque. */
+.callout p,
+.callout li,
+.callout a {
+  color: var(--cor-branca);
+}
+
+/* Organiza eventos do calendário em coluna. */
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+/* Organiza cada item da linha do tempo em duas partes. */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Destaca a coluna com mês ou data. */
+.timeline-date {
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+}
+
+/* Card usado para tabelas de horários. */
+.schedule-card {
+  padding: 24px;
+}
+
+/* Permite rolagem horizontal em telas pequenas. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* Estilo da tabela de horários. */
+.schedule-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+/* Estilo das células da tabela. */
+.schedule-table th,
+.schedule-table td {
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 14px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+
+/* Cabeçalho da tabela. */
+.schedule-table thead th {
+  background-color: #ece7dd;
+}
+
+/* Primeira coluna da tabela. */
+.schedule-table tbody th {
+  color: var(--cor-verde-escuro);
+  width: 130px;
+}
+
+/* Conteúdo das células da tabela. */
+.schedule-table tbody td {
+  color: var(--cor-texto-suave);
+  line-height: 1.6;
+}
+
+/* Organiza a página do mapa em duas colunas. */
+.map-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+/* Bloco principal do mapa. */
+.map-board {
+  padding: 22px;
+}
+
+/* Campo de busca do mapa. */
+.map-search {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-weight: bold;
+}
+
+/* Caixa de pesquisa do mapa. */
+.map-search input {
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Moldura do mapa interativo. */
+.interactive-map {
+  background-color: #eef4e7;
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Área visual interna do mapa. */
+.map-surface {
+  position: relative;
+  min-height: 400px;
+  border-radius: 10px;
+  background:
+    linear-gradient(to right, transparent 0 18%, #d9c3a1 18% 22%, transparent 22% 100%),
+    linear-gradient(to bottom, transparent 0 72%, #d9c3a1 72% 76%, transparent 76% 100%),
+    #8ebd74;
+}
+
+/* Botões que marcam os ambientes no mapa. */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branca);
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Destaca os botões ativos do mapa. */
+.map-pin:hover,
+.map-pin:focus-visible,
+.map-pin.is-active {
+  background-color: var(--cor-verde);
+}
+
+/* Diminui destaque dos itens que não bateram com a busca. */
+.map-pin.is-hidden {
+  opacity: 0.25;
+}
+
+/* Organiza os ambientes explicados abaixo do mapa. */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* Estilo das zonas do mapa. */
+.zone {
+  background-color: #f1f7f3;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Organiza os passos da página do SUAP. */
+.steps {
+  display: grid;
+  gap: 14px;
+}
+
+/* Cada passo fica dividido entre número e conteúdo. */
+.step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 14px;
+  padding: 18px;
+}
+
+/* Número do passo em destaque. */
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Organiza os itens da FAQ. */
+.faq {
+  display: grid;
+  gap: 12px;
+}
+
+/* Estilo de cada item da FAQ. */
+.faq details {
+  padding: 16px 18px;
+  overflow: hidden;
+}
+
+/* Destaca o resumo clicável da FAQ. */
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+}
+
+/* Ajusta o texto interno da FAQ. */
+.faq details p {
+  margin-top: 10px;
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+}
+
+.faq-support {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.question-bubble {
+  position: relative;
+  background-color: var(--cor-azul);
+  color: var(--cor-branca);
+  border-radius: 8px;
+  padding: 26px;
+  box-shadow: var(--sombra);
+}
+
+.question-bubble::after {
+  content: "";
+  position: absolute;
+  right: 26px;
+  bottom: -18px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--cor-azul);
+  transform: rotate(45deg);
+}
+
+.question-bubble p,
+.question-bubble .status-pill {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.question-bubble .status-pill {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.question-form {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  padding: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.question-form label {
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+}
+
+.question-form input,
+.question-form select,
+.question-form textarea {
+  width: 100%;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  color: var(--cor-texto);
+  background-color: #fbfdfb;
+}
+
+.question-form textarea {
+  resize: vertical;
+}
+
+.question-form input:focus,
+.question-form select:focus,
+.question-form textarea:focus {
+  outline: 3px solid rgba(24, 131, 66, 0.18);
+  border-color: var(--cor-verde);
+}
+
+.form-feedback {
+  min-height: 24px;
+  color: var(--cor-verde-escuro);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.calendar-shell {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.calendar-picker,
+.calendar-summary {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+  padding: 26px;
+}
+
+.calendar-picker {
+  display: grid;
+  gap: 16px;
+}
+
+.calendar-summary {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f5fbf7 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calendar-summary p {
+  color: var(--cor-texto-suave);
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.form-row label {
+  color: var(--cor-verde-escuro);
+  font-weight: bold;
+}
+
+.form-row select {
+  width: 100%;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 13px;
+  background-color: #fbfdfb;
+  color: var(--cor-texto);
+  font: inherit;
+}
+
+.form-row select:focus {
+  outline: 3px solid rgba(24, 131, 66, 0.18);
+  border-color: var(--cor-verde);
+}
+
+.semester-field {
+  animation: fieldReveal 0.22s ease-out;
+}
+
+@keyframes fieldReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dynamic-schedule td {
+  min-width: 230px;
+}
+
+.class-block {
+  display: grid;
+  gap: 5px;
+}
+
+.class-block strong {
+  color: var(--cor-texto);
+}
+
+.class-block span {
+  color: var(--cor-texto-suave);
+}
+
+.room-link-wrap {
+  position: relative;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.room-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #edf6f0;
+  color: var(--cor-verde-escuro);
+  border: 1px solid var(--cor-borda);
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.room-link:hover,
+.room-link:focus-visible {
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+}
+
+.room-popover {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  min-width: 116px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background-color: var(--cor-texto);
+  color: var(--cor-branca);
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.room-link-wrap:hover .room-popover,
+.room-link:focus-visible + .room-popover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estiliza o rodapé do site. */
+.site-footer {
+  padding: 24px 0 30px;
+}
+
+/* Caixa interna do rodapé. */
+.site-footer .container {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  padding: 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
+
+/* Ajustes para telas médias. */
+@media (max-width: 900px) {
+  .hero,
+  .grid,
+  .feature-grid,
+  .action-grid,
+  .map-layout,
+  .map-grid,
+  .timeline-item,
+  .faq-support,
+  .calendar-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ajustes para celular. */
+@media (max-width: 700px) {
+  .site-header {
+    padding-top: 140px;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .site-nav a {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-panel,
+  .hero-card,
+  .card,
+  .callout,
+  .map-board,
+  .timeline-item,
+  .step,
+  .faq details,
+  .schedule-card,
+  .feature-card,
+  .question-form,
+  .question-bubble,
+  .welcome-strip,
+  .calendar-picker,
+  .calendar-summary {
+    padding: 18px;
+  }
+
+  .welcome-hero {
+    min-height: 330px;
+  }
+
+  .welcome-hero::after {
+    width: 190px;
+    height: 170px;
+    right: -72px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button,
+  .button-secondary {
+    text-align: center;
+  }
+
+  .map-surface {
+    min-height: 320px;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+  }
+}
