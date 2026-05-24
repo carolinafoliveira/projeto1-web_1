@@ -1,149 +1,149 @@
 /* Importa a fonte Domine do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
 
-/* Reset básico */
+/* Reset básico para remover margens e espaçamentos padrão */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;              /* remove margens padrão dos elementos */
+  padding: 0;             /* remove espaçamentos internos padrão */
+  box-sizing: border-box; /* inclui bordas e padding no cálculo do tamanho */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* ativa rolagem suave ao clicar em links âncora */
 }
 
-/* Paleta de cores */
+/* Paleta de cores usada no site */
 :root {
-  --cor-fundo: #eef5ef;
-  --cor-branca: #ffffff;
-  --cor-texto: #183126;
-  --cor-texto-suave: #5a675f;
-  --cor-verde: #188342;
-  --cor-verde-escuro: #0d5d32;
-  --cor-azul: #195b7a;
-  --cor-amarelo: #f3b43f;
-  --cor-borda: #d4dfd6;
-  --cor-card: #ffffff;
-  --sombra: 0 12px 30px rgba(24, 49, 38, 0.1);
+  --cor-fundo: #eef5ef;        /* cor de fundo geral */
+  --cor-branca: #ffffff;       /* branco padrão */
+  --cor-texto: #183126;        /* cor principal do texto */
+  --cor-texto-suave: #5a675f;  /* cor secundária do texto */
+  --cor-verde: #188342;        /* verde principal */
+  --cor-verde-escuro: #0d5d32; /* verde escuro para destaques */
+  --cor-azul: #195b7a;         /* azul para elementos secundários */
+  --cor-amarelo: #f3b43f;      /* amarelo para destaque */
+  --cor-borda: #d4dfd6;        /* cor das bordas */
+  --cor-card: #ffffff;         /* fundo dos cards */
+  --sombra: 0 12px 30px rgba(24, 49, 38, 0.1); /* sombra suave */
 }
 
-/* Corpo */
+/* Corpo da página */
 body {
-  font-family: 'Domine', serif;
+  font-family: 'Domine', serif; /* fonte principal */
   background:
     radial-gradient(circle at top left, rgba(243, 180, 63, 0.22), transparent 28rem),
-    linear-gradient(180deg, #eef7f1 0%, var(--cor-fundo) 44%, #f7f4ec 100%);
-  color: var(--cor-texto);
-  line-height: 1.5;
+    linear-gradient(180deg, #eef7f1 0%, var(--cor-fundo) 44%, #f7f4ec 100%); /* fundo com gradiente */
+  color: var(--cor-texto);       /* cor padrão do texto */
+  line-height: 1.5;              /* altura da linha para melhor leitura */
 }
 
 /* Cabeçalho */
 .cabecalho {
-  padding-top: 104px;
-  padding-bottom: 34px;
+  padding-top: 104px;   /* espaço superior para não colar no menu fixo */
+  padding-bottom: 34px; /* espaço inferior */
 }
 
 .Menu1 {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--cor-borda);
-  border-radius: 999px;
-  padding: 8px 12px;
-  box-shadow: var(--sombra);
-  z-index: 1000;
+  position: fixed;                     /* fixa o menu no topo */
+  top: 16px;                           /* distância do topo */
+  left: 50%;                           /* centraliza horizontalmente */
+  transform: translateX(-50%);         /* ajusta para centralização */
+  background-color: rgba(255, 255, 255, 0.92); /* fundo branco translúcido */
+  border: 1px solid var(--cor-borda);  /* borda suave */
+  border-radius: 999px;                /* formato arredondado */
+  padding: 8px 12px;                   /* espaçamento interno */
+  box-shadow: var(--sombra);           /* sombra */
+  z-index: 1000;                       /* fica acima dos outros elementos */
 }
 
 .Menu1 ul {
-  list-style: none;   /* remove bolinhas */
-  display: flex;      /* mantém horizontal */
-  gap: 8px;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* remove bolinhas da lista */
+  display: flex;    /* organiza itens na horizontal */
+  gap: 8px;         /* espaço entre links */
+  margin: 0;        /* remove margens padrão */
+  padding: 0;       /* remove espaçamento interno padrão */
 }
 
 .Menu1 li {
-  display: inline-block;
+  display: inline-block; /* cada item tratado como bloco inline */
 }
 
 .Menu1 a {
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  color: var(--cor-verde-escuro);
+  text-decoration: none;       /* remove sublinhado */
+  padding: 8px 12px;           /* espaçamento interno */
+  border-radius: 8px;          /* cantos arredondados */
+  font-weight: bold;           /* texto em negrito */
+  color: var(--cor-verde-escuro); /* cor do texto */
 }
 
 .Menu1 a:hover,
 .Menu1 a.active {
-  background-color: var(--cor-verde);
-  color: var(--cor-branca);
+  background-color: var(--cor-verde); /* fundo verde ao passar o mouse */
+  color: var(--cor-branca);           /* texto branco */
 }
 
 /* Botões */
 .button {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background-color: var(--cor-verde);
-  color: var(--cor-branca);
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  display: inline-block;             /* se comporta como bloco inline */
+  padding: 10px 16px;                /* espaçamento interno */
+  border-radius: 8px;                /* cantos arredondados */
+  background-color: var(--cor-verde);/* fundo verde */
+  color: var(--cor-branca);          /* texto branco */
+  font-weight: bold;                 /* texto em negrito */
+  text-decoration: none;             /* remove sublinhado */
+  border: none;                      /* sem borda padrão */
+  cursor: pointer;                   /* cursor de botão */
+  transition: background-color 0.2s ease; /* animação suave */
 }
 
 .button:hover {
-  background-color: var(--cor-verde-escuro);
+  background-color: var(--cor-verde-escuro); /* verde escuro no hover */
 }
 
 .button-secondary {
   display: inline-block;
   padding: 10px 16px;
   border-radius: 8px;
-  background-color: #edf4ef;
-  color: var(--cor-texto);
+  background-color: #edf4ef;         /* fundo cinza claro */
+  color: var(--cor-texto);           /* texto escuro */
   font-weight: bold;
   text-decoration: none;
-  border: 1px solid var(--cor-borda);
+  border: 1px solid var(--cor-borda);/* borda suave */
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .button-secondary:hover {
-  background-color: #dfece4;
+  background-color: #dfece4; /* cor mais escura no hover */
 }
 
-/* Container */
+/* Container principal */
 .container1 {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 90%;          /* largura relativa */
+  max-width: 1100px;   /* largura máxima */
+  margin: 0 auto;      /* centraliza horizontalmente */
 }
 
 /* Painel de boas-vindas */
 .painel-boasvindas {
-  background-color: var(--cor-card);
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  box-shadow: var(--sombra);
-  padding: 34px;
+  background-color: var(--cor-card); /* fundo branco */
+  border: 1px solid var(--cor-borda);/* borda suave */
+  border-radius: 8px;                /* cantos arredondados */
+  box-shadow: var(--sombra);         /* sombra */
+  padding: 34px;                     /* espaçamento interno */
 }
 
 .intro {
-  color: var(--cor-verde-escuro);
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+  color: var(--cor-verde-escuro); /* cor verde escura */
+  font-size: 0.85rem;             /* tamanho pequeno */
+  font-weight: bold;              /* negrito */
+  text-transform: uppercase;      /* letras maiúsculas */
+  margin-bottom: 12px;            /* espaço inferior */
 }
 
 .lead {
-  color: var(--cor-texto-suave);
-  font-size: 1rem;
+  color: var(--cor-texto-suave); /* cor suave */
+  font-size: 1rem;               /* tamanho padrão */
 }
 
 /* Resumo lateral */
@@ -157,18 +157,18 @@ body {
 
 /* Seções */
 .section {
-  padding: 20px 0;
+  padding: 20px 0; /* espaçamento vertical */
 }
 
 .section-cabecalho {
-  margin-bottom: 18px;
+  margin-bottom: 18px; /* espaço inferior */
 }
 
 .section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-  font-weight: 700;
-  color: var(--cor-verde-escuro);
+  font-size: 1.6rem;          /* tamanho grande */
+  margin-bottom: 8px;         /* espaço inferior */
+  font-weight: 700;           /* negrito */
+  color: var(--cor-verde-escuro); /* verde escuro */
 }
 
 /* Cards */
@@ -193,9 +193,9 @@ body {
 }
 
 .acoes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: grid;                          /* organiza em grade */
+  grid-template-columns: repeat(3, 1fr);  /* 3 colunas iguais */
+  gap: 16px;                              /* espaço entre cards */
 }
 
 /* Cronograma */
@@ -208,72 +208,24 @@ body {
 }
 
 .tabela-container {
-  overflow-x: auto;
+  overflow-x: auto; /* permite rolagem horizontal */
 }
 
 .tabela-cronograma {
-  width: 100%;
-  min-width: 700px;
-  border-collapse: collapse;
+  width: 100%;          /* ocupa toda largura */
+  min-width: 700px;     /* largura mínima */
+  border-collapse: collapse; /* remove espaçamento entre células */
 }
 
 .tabela-cronograma th,
 .tabela-cronograma td {
-  border-bottom: 1px solid var(--cor-borda);
-  padding: 14px;
-  text-align: left;
-  font-size: 0.95rem;
+  border-bottom: 1px solid var(--cor-borda); /* linha divisória */
+  padding: 14px;                             /* espaçamento interno */
+  text-align: left;                          /* texto alinhado à esquerda */
+  font-size: 0.95rem;                        /* tamanho do texto */
 }
 
-.tabela-cronograma thead th {
-  background-color: #ece7dd;
-}
-
-.tabela-cronograma tbody th {
-  color: var(--cor-verde-escuro);
-}
-
-/* Passos (SUAP) */
-.passos {
-  display: grid;
-  gap: 14px;
-}
-
-.passo {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 14px;
-  padding: 18px;
-  background-color: var(--cor-card);
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  box-shadow: var(--sombra);
-}
-
-.numero {
-  width: 50px;
-  height: 50px;
-  background-color: var(--cor-verde);
-  color: var(--cor-branca);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* Rodapé */
-.site-footer {
-  padding: 24px 0 30px;
-}
-
-.containerfooter {
-  background-color: var(--cor-card);
-  border: 1px solid var(--cor-borda);
-  border-radius: 12px;
-  box-shadow: var(--sombra);
-  padding: 16px;
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--cor-texto-suave);
+.tabela-cronograma thead {
+  background-color: var(--cor-verde); /* fundo verde para o cabeçalho */
+  color: var(--cor-branca);           /* texto branco no cabeçalho */
 }
