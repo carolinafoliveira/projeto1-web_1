@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="Menu1" label="Menu principal">
+            <ul>
+                <li><a href="paginainicial_v1.html">Início</a></li>
+                <li><a href="calendario.html">Calendário</a></li>
+                <li><a href="mapa.html">Mapa do IF</a></li>
+                <li><a href="suap.html">SUAP</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="container1">
+            <section class="painel-boasvindas" id="titulo-faq">
+                <p class="intro">Perguntas frequentes</p>
+                <h1>Dúvidas comuns, respostas rápidas e um canal para perguntar.</h1>
+                <p class="lead">Encontre orientações sobre rotina acadêmica, campus, SUAP e atendimento. Se sua pergunta
+                    não aparecer aqui, envie pelo formulário no fim da página.</p>
+                <div class="opcoesduvida">
+                    <a class="button" href="#form-duvidas">Enviar dúvida</a>
+                    <a class="button" href="#duvidas-iniciais">Ver perguntas</a>
+                </div>
+            </section>
+
+            <aside class="resumo">
+                <h2>Como usar esta página</h2>
+                <ul>
+                    <li><strong>Leia por tema:</strong> escolha a pergunta mais próxima da sua situação.</li>
+                    <li><strong>Confirme no setor certo:</strong> quando necessário, fale com coordenação ou secretaria.</li>
+                    <li><strong>Envie sua dúvida:</strong> use o formulário quando precisar de uma resposta mais específica.</li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+
+    <main>
+        <section id="duvidas-iniciais" class="section">
+            <div class="container1">
+                <h2>Perguntas principais</h2>
+                <ul class="faq-list">
+                    <li>
+                        <h3>Como vejo o horário da minha turma?</h3>
+                        <p>Você pode consultar no calendário acadêmico ou no SUAP.</p>
+                    </li>
+                    <li>
+                        <h3>Onde encontro a biblioteca e a secretaria?</h3>
+                        <p>No mapa do campus você localiza os prédios e setores.</p>
+                    </li>
+                    <li>
+                        <h3>Como acesso o SUAP?</h3>
+                        <p>Use seu login institucional para entrar e acompanhar notas e avisos.</p>
+                    </li>
+                    <li>
+                        <h3>O que fazer se minha dúvida não estiver aqui?</h3>
+                        <p>Envie sua pergunta pelo formulário abaixo.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="form-duvidas" class="section">
+            <div class="container1">
+                <h2>Envie sua dúvida</h2>
+                <form>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="assunto">Assunto:</label><br>
+                    <input type="text" id="assunto" name="assunto"><br><br>
+
+                    <label for="categoria">Categoria da dúvida:</label><br>
+                    <select id="categoria" name="categoria">
+                        <option value="horarios">Horários</option>
+                        <option value="mapa">Mapa do campus</option>
+                        <option value="suap">SUAP</option>
+                        <option value="secretaria">Secretaria</option>
+                        <option value="outros">Outros</option>
+                    </select><br><br>
+
+                    <label for="mensagem">Sua dúvida:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+                    <button type="submit" class="button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="containerfooter">
+            <p>Projeto Final - Desenvolvimento WEB 1</p>
+        </div>
+    </footer>
+</body>
+
+</html>
